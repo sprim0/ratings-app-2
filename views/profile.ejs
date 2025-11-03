@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Rate Your Music</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1>Rate Your Music</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div> 
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="sort-section">
+          <button id="sort-button" class="sort-button">Sort by Rating</button>
+        </div>
+        <div class="albums-list" id="albums-list">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <% var rating = messages[i].rating || 0; %>
+            <div class="album-card" data-artist="<%= messages[i].artist || '' %>" data-album="<%= messages[i].album || '' %>" data-rating="<%= rating %>">
+              <span class="album-name">
+                <%= messages[i].artist ? messages[i].artist + ' - ' : '' %><%= messages[i].album || '' %>
+              </span>
+              <div class="star-rating" data-album="<%= messages[i].album || '' %>" data-artist="<%= messages[i].artist || '' %>">
+                <% 
+                  for(var j=1; j<=5; j++) {
+                    if(j <= rating) {
+                %>
+                  <span class="star filled" data-rating="<%= j %>">★</span>
+                <% } else { %>
+                  <span class="star unfilled" data-rating="<%= j %>">★</span>
+                <% } } %>
+              </div>
+              <span class="delete-icon"><i class="fa fa-trash" aria-hidden="true"></i></span>
+            </div>
+          <% } %>
+        </div>
+
+        <div class="add-album-section">
+          <% if (user.local.email) { %>
+            <form action="/createAlbum" method="POST">
+              <input type="text" placeholder="Artist" name="artist" class="album-input">
+              <input type="text" placeholder="Album" name="album" class="album-input">
+              <button type="submit" class="add-button">Add</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
+
+<!-- completed with the help of AI (cursor) -->

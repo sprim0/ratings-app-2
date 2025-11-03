@@ -1,0 +1,142 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+img{
+  height: 200px;
+}
+
+.well{
+  display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.page-header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.sort-section {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.sort-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+  background-color: #218838;
+}
+
+.albums-list {
+  margin-bottom: 40px;
+}
+
+.album-card {
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.album-name {
+  font-size: 1em;
+  color: #333;
+  font-weight: normal;
+  flex: 1;
+}
+
+.star-rating {
+  display: flex;
+  gap: 2px;
+  margin: 0 20px;
+}
+
+.star {
+  font-size: 1.2em;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.filled {
+  color: #ff8c00;
+}
+
+.star.unfilled {
+  color: #000;
+}
+
+.delete-icon {
+  color: #d32f2f;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.delete-icon:hover {
+  color: #b71c1c;
+}
+
+.add-album-section {
+  margin-top: 30px;
+}
+
+.add-album-section form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.album-input {
+  flex: 0 0 200px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.album-input::placeholder {
+  color: #999;
+}
+
+.add-button {
+  padding: 10px 25px;
+  background-color: #5dade2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-button:hover {
+  background-color: #4aa3d1;
+}
+
+/* completed with the help of AI (cursor) */
