@@ -28,6 +28,10 @@ img{
   text-align: right;
 }
 
+.container{
+  background: rgba(250, 250, 250, 0.931);
+}
+
 .sort-button {
   padding: 10px 20px;
   background-color: #28a745;
@@ -89,16 +93,6 @@ img{
 
 .star.unfilled {
   color: #000;
-}
-
-.delete-icon {
-  color: #d32f2f;
-  cursor: pointer;
-  font-size: 1.1em;
-}
-
-.delete-icon:hover {
-  color: #b71c1c;
 }
 
 .add-album-section {

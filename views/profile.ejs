@@ -5,16 +5,26 @@
   <title>Rate Your Music</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    body {
+        background-image: url('https://img.freepik.com/premium-vector/vinyl-records-pattern-music-illustration-creative-luxury-cover_510351-3617.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
 
     <div class="page-header text-center">
-      <h1>Rate Your Music</h1>
+      <h1>Rate Your Albums!</h1>
+      <h2> Enter an album name, rate it from 1-5 stars, and make edits</h2>
       <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div> 
+    </div>
 
     <div class="row">
       <div class="col-sm-12">
@@ -38,10 +48,12 @@
                   <span class="star unfilled" data-rating="<%= j %>">★</span>
                 <% } } %>
               </div>
-              <span class="delete-icon"><i class="fa fa-trash" aria-hidden="true"></i></span>
+              <!-- <span class="delete-icon"><i class="fa fa-trash"></i></span> -->
+               <span class="delete-icon">🗑️</span> 
             </div>
           <% } %>
         </div>
+         
 
         <div class="add-album-section">
           <% if (user.local.email) { %>
@@ -50,7 +62,7 @@
               <input type="text" placeholder="Album" name="album" class="album-input">
               <button type="submit" class="add-button">Add</button>
             </form>
-          <% } %>
+            <% } %>
         </div>
       </div>
     </div>

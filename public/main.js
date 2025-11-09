@@ -44,7 +44,7 @@ if (albumsList) {
       const album = albumCard.getAttribute('data-album');
       const artist = albumCard.getAttribute('data-artist') || '';
       
-      fetch('/messages', {
+      fetch('/albums', {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json'

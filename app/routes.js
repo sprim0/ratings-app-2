@@ -75,12 +75,19 @@ module.exports = function (app, passport, db) {
     }
   })
 
-  app.delete('/messages', (req, res) => {
-    db.collection('rating').findOneAndDelete({ album: req.body.album, artist: req.body.artist }, (err, result) => {
-      if (err) return res.send(500, err)
-      res.send('Message deleted!')
-    })
+  // app.delete('/messages', (req, res) => {
+  //   db.collection('rating').findOneAndDelete({ album: req.body.album, artist: req.body.artist }, (err, result) => {
+  //     if (err) return res.send(500, err)
+  //     res.send('Message deleted!')
+  //   })
+  // })
+
+  app.delete('/albums', (req, res) => {
+  db.collection('rating').findOneAndDelete({ album: req.body.album, artist: req.body.artist }, (err, result) => {
+    if (err) return res.status(500).send(err)
+    res.send('Album deleted!')
   })
+})
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================
@@ -140,3 +147,4 @@ function isLoggedIn(req, res, next) {
   res.redirect('/');
 }
 
+/* completed with the help of claude sonnet */
